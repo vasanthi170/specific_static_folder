@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/c1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+</head>
+<body>
+    <center>
+        <h1>
+            Helloo worldd...this is specific static file...
+        </h1>
+        <a href=""></a>
+    </center>
+</body>
+</html>
+<!--
+SPECIFIC STATIC FOLDERS: we will go for specific static because the js,css might be same for all apps but images are different for one app to another app.
+*Inorder to access the both fOLDERS in same location we will go for STATIC_ROOT (if content is not available in css,js or images they won't get copied).
+-->
+
+<!--
+create a project > create an app > enter into inner project folder > create static folder > enter into static folder > create jss,css folders inside static folder>
+come back from project folder > enter into app > create another static folder > enter into static folder > create images folder > comeback from app.
+
+after creating folders 
+go to settings.py and register them. Here we have to take two paths of static for project static and app static.
+after register them using STATICFILES_DIRS 
+next we need to create one STATIC_ROOT for easy access of two different directories at same place. again we need to run one command 'python manage.py collectstatic'.
+Then files got copied into STATIC_ROOT and new folder got created in the name of static.
+then we need to do create views,urls,html pages.
+-->
